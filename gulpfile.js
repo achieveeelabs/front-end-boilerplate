@@ -1,60 +1,47 @@
-// Required Packges
-// npm install gulp (use this if you have already install gulp globally)
-// else use the following cammand
+	// npm install gulp -g (use this if you want install gulp globally).
 
-// npm install --global gulp
+	// npm install gulp
 var gulp  = require('gulp'),
-// npm install gulp-util
-var gutil = require('gulp-util');
-// npm install gulp-concat
+	// npm install gulp-util
+	gutil = require('gulp-util');
+	// npm install gulp-concat
 var concat = require('gulp-concat');
-// npm install gulp-minify-css
+	// npm install gulp-minify-css
 var minifyCSS = require('gulp-minify-css');
-// npm install gulp-uglify
+	// npm install gulp-uglify
 var uglify = require('gulp-uglify');
+//  npm install gulp-sass
+var sass = require('gulp-sass');
 // npm i gulp-image-optimization
-var imageop = require('gulp-image-optimization');
+// var imageop = require('gulp-image-optimization');
 
-// Set task
-gulp.task('production', function() {
-
-	gulp.src(['assets/css/bootstrap.min.css'])
-	.pipe(minifyCSS())
-	.pipe(concat('webapp.min.css'))
-	.pipe(gulp.dest('css/'))
-
-	gulp.src(['assets/js/bootstrap.min.js'])
-	.pipe(uglify())
-	.pipe(concat('webapp.min.js'))
-	.pipe(gulp.dest('js/'));
-
-});
-
-
-// For CSS
 gulp.task('build-css', function() {
-	gulp.src(['assets/css/bootstrap.min.css'])
+	gulp.src(['css/bootstrap.css','css/font-awesome.css','css/style.css'])
 	.pipe(minifyCSS())
 	.pipe(concat('webapp.min.css'))
-	.pipe(gulp.dest('css/'));
+	.pipe(gulp.dest('dist/'));
 });
 
-
-// For js
 gulp.task('build-js', function() {
-	gulp.src(['js/html5.js','js/bootstrap.min.js','js/bootstrap.offcanvas.js','js/swiper.min.js','js/theme-script.js','js/skip-link-focus-fix.js'])
+	gulp.src(['js/jquery-3.2.1.min.js','js/popper.min.js','js/bootstrap.min.js'])
 	.pipe(uglify())
 	.pipe(concat('webapp.min.js'))
-	.pipe(gulp.dest('js/'));
+	.pipe(gulp.dest('dist/'));
 });
 
-gulp.task('watch', function() {
-	gulp.watch('js/*.js', ['build-js']);
-	gulp.watch('css/*.css', ['build-css']);
+gulp.task('sass', function() {
+	gulp.src('sass/**/*.scss')
+	.pipe(sass().on('error', sass.logError))
+	.pipe(concat('style.css'))
+	.pipe(gulp.dest('css/'))
 });
 
+gulp.task('dev',function() {
+	gulp.watch('sass/**/*.scss', function() {
+		gulp.run(['sass','build-css','build-js']);
+	});
+});
 
-// For Images
 gulp.task('img', function() {
 	gulp.src(['assets/img/*.png','assets/img/*.jpg','assets/img/*.gif','assets/img/*.jpeg','assets/img/*/*.png','assets/img/*/*.jpg','assets/img/*/*.gif','assets/img/*/*.jpeg']).pipe(imageop({
 		optimizationLevel: 5,
