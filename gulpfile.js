@@ -16,7 +16,7 @@ var sass = require('gulp-sass');
 // var imageop = require('gulp-image-optimization');
 
 gulp.task('build-css', function() {
-	gulp.src(['css/bootstrap.css','css/font-awesome.css','css/style.css'])
+	gulp.src(['css/bootstrap.min.css','css/font-awesome.css','css/style.css'])
 	.pipe(minifyCSS())
 	.pipe(concat('webapp.min.css'))
 	.pipe(gulp.dest('dist/'));
