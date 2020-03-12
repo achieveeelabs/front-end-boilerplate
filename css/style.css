@@ -1,0 +1,60 @@
+h1, h2, h3, h4, h5, h6, a, p, span {
+  font-family: 'PT Sans',sans-serif; }
+
+.text-roboto {
+  font-family: 'Roboto',sans-serif !important; }
+
+.nav-sec {
+  background: linear-gradient(180deg, #FCFEDB 0%, #F6FABA 99.99%, #FECC40 100%), #FCFEDB;
+  height: 630px; }
+  .nav-sec .navbar {
+    padding: 0; }
+    .nav-sec .navbar .navbar-nav li {
+      margin: auto; }
+      .nav-sec .navbar .navbar-nav li a {
+        font-family: 'PT Sans',sans-serif; }
+        .nav-sec .navbar .navbar-nav li a .mailid-nav {
+          padding-left: 15px; }
+        .nav-sec .navbar .navbar-nav li a .call-nav {
+          padding-left: 15px; }
+  .nav-sec .section1 {
+    padding: 30px 0; }
+    .nav-sec .section1 .main-div {
+      display: flex;
+      justify-content: space-between; }
+      .nav-sec .section1 .main-div .main-div_custom {
+        width: 70%; }
+      .nav-sec .section1 .main-div .section1-head h1 {
+        font-size: 36px; }
+      .nav-sec .section1 .main-div .section1-text p {
+        font-size: 18px; }
+    .nav-sec .section1 .delivery-form {
+      padding-left: 50px; }
+    .nav-sec .section1 .card {
+      height: 426px;
+      width: 382px;
+      border-radius: 5px;
+      border: 0; }
+      .nav-sec .section1 .card .card-body .almond-img img {
+        margin-top: -85px; }
+      .nav-sec .section1 .card .card-body .card-form h1 {
+        font-weight: bold;
+        font-size: 50px;
+        color: #B99737; }
+      .nav-sec .section1 .card .card-body .card-form p {
+        font-size: 14px;
+        line-height: 16px; }
+      .nav-sec .section1 .card .card-body .card-form .name-div p {
+        margin: 0;
+        padding-bottom: 5px; }
+      .nav-sec .section1 .card .card-body .card-form .name-div input {
+        width: 100%;
+        height: 40px; }
+      .nav-sec .section1 .card .card-body .card-form .number-div {
+        padding-top: 8px; }
+        .nav-sec .section1 .card .card-body .card-form .number-div p {
+          margin: 0;
+          padding-bottom: 5px; }
+        .nav-sec .section1 .card .card-body .card-form .number-div input {
+          width: 100%;
+          height: 40px; }

@@ -36,7 +36,7 @@ gulp.task('sass', function() {
 	.pipe(gulp.dest('css/'))
 });
 
-gulp.task('dev',function() {
+gulp.task('watch',function() {
 	gulp.watch('sass/**/*.scss', function() {
 		gulp.run(['sass','build-css','build-js']);
 	});

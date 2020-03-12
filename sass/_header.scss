@@ -1,0 +1,89 @@
+.nav-sec{
+	background: linear-gradient(180deg, #FCFEDB 0%, #F6FABA 99.99%, #FECC40 100%), #FCFEDB;
+	height: 630px;
+	.navbar{
+		padding: 0;
+		.navbar-nav{
+			li{
+				margin: auto;
+				a{
+					font-family: 'PT Sans',sans-serif;
+					.mailid-nav{
+						padding-left: 15px;
+					}
+					.call-nav{
+						padding-left: 15px;
+					}
+				}
+			}
+		}
+	}
+	.section1{
+		padding: 30px 0;
+		.main-div{
+			display: flex;
+			justify-content: space-between;
+			.main-div_custom{
+				width: 70%;
+			}
+			.section1-head{
+				h1{
+					font-size: 36px;
+				}
+			}
+			.section1-text{
+				p{
+					font-size: 18px;
+				}
+			}
+		}
+		.delivery-form{
+			padding-left: 50px;
+		}
+		.card{
+			height: 426px;
+			width: 382px;
+			border-radius: 5px;
+			border: 0;
+			.card-body{
+				.almond-img{
+					img{
+						margin-top: -85px;
+					}
+				}
+				.card-form{
+					h1{
+						font-weight: bold;
+						font-size: 50px;
+						color: #B99737;
+					}
+					p{
+						font-size: 14px;
+						line-height: 16px;
+					}
+					.name-div{
+						p{
+							margin: 0;
+							padding-bottom: 5px;
+						}
+						input{
+							width: 100%;
+							height: 40px;
+						}
+					}
+					.number-div{
+						padding-top: 8px;
+						p{
+							margin: 0;
+							padding-bottom: 5px;
+						}
+						input{
+							width: 100%;
+							height: 40px;
+						}
+					}
+				}
+			}
+		}
+	}
+}	
